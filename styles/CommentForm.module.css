@@ -1,0 +1,20 @@
+.Form {
+  padding: 1rem;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.inputWrapper label {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1024px) {
+  .Form {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

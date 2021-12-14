@@ -1,0 +1,60 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary);
+  color: var(--whitetext);
+  padding: 2rem 0rem;
+  margin-top: 2rem;
+}
+
+.navSection {
+  padding: 1rem 1rem;
+}
+
+.navSection a {
+  display: block;
+  font-size: 16px;
+  padding: 1rem 0 0.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.servicesSection {
+  text-align: center;
+  padding: 1rem;
+}
+
+.servicesSection h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.servicesSection p {
+  font-size: 16px;
+  padding-bottom: 1rem;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 8rem;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: var(--largepadding);
+    align-items: flex-start;
+  }
+
+  /* .footer > div {
+    padding-right: 8rem;
+  } */
+}

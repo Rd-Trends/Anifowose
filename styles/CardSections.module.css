@@ -1,0 +1,49 @@
+.container {
+  text-align: center;
+  padding: var(--smallpadding);
+  margin: 4rem 0 0;
+}
+
+.container h1 {
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--secondary);
+  padding: 0rem 1rem;
+  width: fit-content;
+  color: var(--primary);
+  text-align: left;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-content: center;
+  grid-gap: 2rem;
+}
+
+.seeMoreLink {
+  padding-top: 1.5rem;
+  text-align: left;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 0.3rem;
+  width: fit-content;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    padding: var(--meduimpadding);
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    padding: var(--largepadding);
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+}

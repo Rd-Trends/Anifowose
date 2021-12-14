@@ -1,0 +1,60 @@
+.wrapper {
+  height: 80vh;
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerWrapper {
+  composes: wrapper;
+}
+
+.formWrapper {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: var(--whitebg);
+  border-radius: 10px;
+}
+
+.formWrapper h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.inputWrapper label {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.loginLink {
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.loginLink a {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 900px) and (max-height: 800px) {
+  .registerWrapper {
+    margin: 6rem auto;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-height: 1000px) {
+  .registerWrapper {
+    margin: 8rem auto;
+  }
+}

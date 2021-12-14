@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.image p {
+  padding: 1rem;
+  border-radius: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.commentBox {
+  margin-left: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(206, 205, 205);
+  border-radius: 10px;
+  width: 80%;
+}
+.meta {
+  padding-bottom: 0.3rem;
+}
+
+.userName,
+.date {
+  display: inline;
+}
+
+.userName {
+  font-size: 16px;
+  padding-right: 1rem;
+}
+
+.date {
+  color: grey;
+}
+
+@media screen and (max-width: 760px) {
+  .commentBox {
+    width: 75%;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .commentBox {
+    width: 88%;
+  }
+}

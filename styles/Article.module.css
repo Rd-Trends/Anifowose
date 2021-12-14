@@ -1,0 +1,135 @@
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.contentWrapper {
+  padding: 1rem;
+}
+
+.contentWrapper p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.contentWrapper figure {
+  padding: 1rem 0rem 1rem;
+  width: 100%;
+}
+
+/* style the yarpp (related post section injected through wordpress) */
+.contentWrapper div {
+  padding-top: 1.5rem;
+}
+
+.contentWrapper div h3 {
+  font-weight: 500;
+  border-bottom: 3px solid var(--primary);
+  width: fit-content;
+}
+
+.contentWrapper div ol {
+  padding: 1rem 1rem;
+}
+
+.contentWrapper div ol li {
+  padding-bottom: 0.5rem;
+}
+
+/* style for blockquote */
+
+.sidekick {
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid #039be5;
+  font-family: "Roboto", serif;
+  font-size: 2.4em;
+  line-height: 1.5em;
+  font-weight: 100;
+}
+.contentWrapper blockquote:before,
+.contentWrapper blockquote:after {
+  font-family: Calibri;
+  color: #039be5;
+  font-size: 34px;
+}
+.contentWrapper blockquote:before {
+  content: "\201e";
+}
+.contentWrapper blockquote:after {
+  content: "\201c";
+}
+.contentWrapper blockquote cite {
+  font-size: 50%;
+  text-align: center;
+  top: 50%;
+}
+.contentWrapper blockquote cite:before {
+  content: " \2015 ";
+}
+
+/* style the comment section title */
+.commentSection h1 {
+  padding: 1rem;
+}
+
+.sharePostSection h3 {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 300px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .title {
+    font-size: 40px;
+    font-weight: 400;
+    padding: 2rem;
+  }
+
+  .commentSection {
+    max-width: 80%;
+    margin: 1rem auto;
+  }
+
+  .contentWrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .contentWrapper P {
+    font-size: 20px;
+    line-height: 2.2rem;
+  }
+
+  .sharePostSection {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 740px) {
+  .contentWrapper,
+  .sharePostSection,
+  .commentSection {
+    padding: var(--meduimpadding);
+  }
+
+  .contentWrapper P {
+    font-size: 16px;
+    line-height: 2rem;
+  }
+}

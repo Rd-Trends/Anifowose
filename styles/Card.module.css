@@ -1,0 +1,38 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  width: 100%;
+  max-width: 100%;
+  color: var(--primary);
+  background-color: var(--whitebg);
+  border-radius: 0px 10px 10px 0px;
+  padding-bottom: 1rem;
+}
+
+.cardImageContainer {
+  width: 100%;
+}
+
+.Card h2 {
+  font-size: 1.1rem;
+  padding: 1rem 0 0.5rem 1rem;
+}
+
+.Card h2,
+.Card p {
+  text-align: left;
+}
+
+.Card p {
+  font-size: 14px;
+  padding: 0.3rem 1rem 1rem 1rem;
+}
+
+.cardBtn {
+  composes: btn_primary from "./Button.module.css";
+  max-width: 150px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  color: white;
+}

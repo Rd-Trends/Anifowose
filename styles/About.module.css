@@ -1,0 +1,44 @@
+.About {
+  padding: var(--smallpadding);
+  margin: 3rem 0;
+}
+
+.About h1 {
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--secondary);
+  padding: 0rem 1rem;
+  width: fit-content;
+  color: var(--primary);
+  text-align: left;
+}
+
+.About p {
+  font-size: 16px;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 760px) {
+  .About {
+    padding: var(--meduimpadding);
+  }
+
+  .About h1 {
+    margin-bottom: 2rem;
+  }
+
+  .About p {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .About {
+    padding: var(--largepadding);
+  }
+
+  .About p {
+    font-size: 20px;
+    line-height: 2.2rem;
+  }
+}
