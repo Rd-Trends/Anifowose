@@ -105,8 +105,8 @@ const Music = ({ posts }) => {
                 title={title}
                 slug={slug}
                 page="posts"
-                featuredImage={featuredImage.node.mediaItemUrl}
-                altText={featuredImage.node.title}
+                featuredImage={featuredImage?.node.mediaItemUrl}
+                altText={featuredImage?.node?.title}
                 buttonText="Read More..."
               />
             );

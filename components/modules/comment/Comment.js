@@ -7,9 +7,9 @@ const comment = ({ comments }) => {
   return (
     <>
       {comments.map((item, index) => {
-        const content = item.content;
-        const date = item.commentedOn.node.date;
-        const authorName = item.author.node.name;
+        const content = item?.content;
+        const date = item?.commentedOn?.node?.date;
+        const authorName = item?.author?.node?.name;
         const fancyDisplayedAuthorId = Array.from(authorName.substr(0, 2)).join(
           " "
         );

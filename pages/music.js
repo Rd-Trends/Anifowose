@@ -111,9 +111,9 @@ const Music = ({ posts }) => {
                 title={title}
                 slug={slug}
                 page="music"
-                featuredImage={featuredImage.node.mediaItemUrl}
+                featuredImage={featuredImage?.node?.mediaItemUrl}
                 buttonText="Download"
-                altText={featuredImage.node.title}
+                altText={featuredImage?.node?.title}
               />
             );
           })}
