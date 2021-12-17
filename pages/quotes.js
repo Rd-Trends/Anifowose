@@ -36,7 +36,7 @@ const Quotes = ({ data }) => {
     <Layout>
       <Seo url={url} />
       <article className={Style.container}>
-        <h1>Quotes</h1>
+        <h1 className={Style.heading}>Be Motivated!</h1>
         <div className={Style.cardWrapper}>
           {quotes.map((post) => {
             const { node } = post;

@@ -5,7 +5,7 @@ export const getPosts = async () => {
   const result = await client.query({
     query: gql`
       query getMusicAndMusic {
-        posts(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
+        posts(first: 4, where: { orderby: { field: DATE, order: DESC } }) {
           nodes {
             title
             slug

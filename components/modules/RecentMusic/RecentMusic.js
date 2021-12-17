@@ -6,7 +6,7 @@ import Style from "../../../styles/CardSections.module.css";
 const RecentMusic = ({ posts }) => {
   return (
     <article className={Style.container}>
-      <h1>Recent Music</h1>
+      <h1 className={Style.heading}>Recent Music</h1>
       <div className={Style.cardWrapper}>
         {posts.map((post) => {
           let { slug, title, featuredImage } = post;

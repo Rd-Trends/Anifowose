@@ -6,7 +6,7 @@ import Style from "../../../styles/CardSections.module.css";
 const RecentQuotes = ({ quotes }) => {
   return (
     <article className={Style.container}>
-      <h1>Be Motivted!</h1>
+      <h1 className={Style.heading}>Be Motivted!</h1>
       <div className={Style.cardWrapper}>
         {quotes.map((post) => {
           const { node } = post;
