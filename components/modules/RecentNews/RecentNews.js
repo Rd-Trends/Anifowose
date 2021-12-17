@@ -17,8 +17,8 @@ const RecentMusic = ({ posts }) => {
               title={post?.title}
               slug={post?.slug}
               page="posts"
-              featuredImage={post?.featuredImage.node.mediaItemUrl}
-              altText={post?.featuredImage.node.title}
+              featuredImage={post?.featuredImage?.node?.mediaItemUrl}
+              altText={post?.featuredImage?.node?.title}
               buttonText="Read More..."
             />
           );

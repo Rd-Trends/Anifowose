@@ -4,7 +4,7 @@ import { client } from "../lib/apollo";
 export const getPosts = async () => {
   const result = await client.query({
     query: gql`
-      query getMusicAndMusic {
+      query getMusicAndPosts {
         posts(first: 4, where: { orderby: { field: DATE, order: DESC } }) {
           nodes {
             title
@@ -24,7 +24,6 @@ export const getPosts = async () => {
             title
             slug
             date
-            excerpt
             featuredImage {
               node {
                 mediaItemUrl
