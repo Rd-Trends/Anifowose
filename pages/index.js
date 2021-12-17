@@ -26,9 +26,9 @@ export default function Home({ posts, quotes }) {
     <Layout>
       <Seo url={url} />
       <Header />
-      <RecentMusic posts={posts.recentMusic} />
-      <RecentNews posts={posts.recentNews} />
-      <RecentQuotes quotes={quotes.edges} />
+      <RecentMusic posts={posts?.recentMusic} />
+      <RecentNews posts={posts?.recentNews} />
+      <RecentQuotes quotes={quotes?.edges} />
       <About />
     </Layout>
   );
