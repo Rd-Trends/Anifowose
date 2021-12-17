@@ -8,9 +8,9 @@ const RecentQuotes = ({ quotes }) => {
     <article className={Style.container}>
       <h1 className={Style.heading}>Be Motivted!</h1>
       <div className={Style.cardWrapper}>
-        {quotes.map((post) => {
+        {quotes?.map((post) => {
           const { node } = post;
-          let { title, mediaItemUrl } = node.image.quoteImage;
+          let { title, mediaItemUrl } = node?.image?.quoteImage;
           return (
             <Image
               key={title}

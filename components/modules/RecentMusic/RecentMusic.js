@@ -8,16 +8,16 @@ const RecentMusic = ({ posts }) => {
     <article className={Style.container}>
       <h1 className={Style.heading}>Recent Music</h1>
       <div className={Style.cardWrapper}>
-        {posts.map((post) => {
-          let { slug, title, featuredImage } = post;
+        {posts?.map((post) => {
+          // let { slug, title, featuredImage } = post;
           return (
             <Card
-              key={slug}
-              title={title}
-              slug={slug}
+              key={post?.slug}
+              title={post?.title}
+              slug={post?.slug}
               page="music"
-              featuredImage={featuredImage.node.mediaItemUrl}
-              altText={featuredImage.node.title}
+              featuredImage={post?.featuredImage.node.mediaItemUrl}
+              altText={post?.featuredImage.node.title}
               buttonText="Download"
             />
           );
