@@ -13,8 +13,7 @@ const comment = ({ comments }) => {
         const fancyDisplayedAuthorId = Array.from(authorName.substr(0, 2)).join(
           " "
         );
-        const color = randomColor({ hue: "blue", count: 1 });
-        console.log(color);
+        const color = randomColor({ hue: "purple", count: 1 });
 
         return (
           <section key={index} className={Style.wrapper}>

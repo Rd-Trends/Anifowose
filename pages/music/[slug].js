@@ -15,44 +15,44 @@ const PostPage = ({ post }) => {
 
   useEffect(() => {
     setUrl(window.location.href);
-    setComments(post.comments.nodes);
+    setComments(post?.comments?.nodes);
   }, [post.comments.nodes]);
 
   return (
     <Layout>
       {post && (
         <article className={Style.wrapper}>
-          <Seo seo={post.seo} url={url} />
+          <Seo seo={post?.seo} url={url} />
           <h1 className={Style.title}>{post?.title}</h1>
           <div className={Style.imageContainer}>
             <Image
-              src={post.featuredImage.node.mediaItemUrl}
+              src={post?.featuredImage?.node?.mediaItemUrl}
               width={100}
               height={70}
               layout="responsive"
               sizes="50vw"
               priority
-              alt={post.featuredImage.node.title}
+              alt={post?.featuredImage?.node?.title}
             />
           </div>
           <div
             className={Style.contentWrapper}
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: post?.content }}
           ></div>
 
           <div className={Style.sharePostSection}>
             <h3>Share this post</h3>
-            <SharePost title={post.title} url={url} />
+            <SharePost title={post?.title} url={url} />
           </div>
 
           <div className={Style.commentSection}>
             <h1>
               Comments
-              {post.commentCount ? `{ ${post.commentCount} }` : "{ 0 }"}
+              {post?.commentCount ? `{ ${post.commentCount} }` : "{ 0 }"}
             </h1>
 
             <Form
-              postId={post.musicId}
+              postId={post?.musicId}
               setComments={setComments}
               type="music"
             />
