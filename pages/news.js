@@ -3,7 +3,7 @@ import { Card } from "../components/modules/Card/index";
 import {
   getPaginatedPosts,
   getPaginatedSearchPosts,
-} from "../utils/paginatedQuery";
+} from "../queries/paginatedPosts";
 import { Input } from "../components/elements/FormElements/index";
 import { AiOutlineSearch } from "react-icons/ai";
 import Layout from "../components/layout/index";
@@ -71,7 +71,7 @@ const Music = ({ posts }) => {
   };
 
   return (
-    <Layout>
+    <>
       <Seo url={url} />
       <article className={Style.container}>
         <div className={Style.titleAndSearchSection}>
@@ -126,7 +126,7 @@ const Music = ({ posts }) => {
           )}
         </div>
       </article>
-    </Layout>
+    </>
   );
 };
 

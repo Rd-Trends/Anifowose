@@ -54,7 +54,7 @@
 .btn_navBtn {
   composes: btn_iconBtn;
   position: fixed;
-  top: 10px;
+  top: 8px;
   right: 16px;
   z-index: 20;
   color: var(--secondary);

@@ -15,15 +15,25 @@
   padding: 1rem;
 }
 
+.contentWrapper > * {
+  max-width: 100%;
+}
+
 .contentWrapper p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 2rem;
 }
 
 .contentWrapper figure {
   padding: 1rem 0rem 1rem;
+  max-width: 100%;
+}
+
+.contentWrapper iframe,
+.contentWrapper embed {
   width: 100%;
+  max-width: 100%;
 }
 
 /* style the yarpp (related post section injected through wordpress) */
@@ -34,7 +44,8 @@
 .contentWrapper div h3 {
   font-weight: 500;
   border-bottom: 3px solid var(--primary);
-  width: fit-content;
+  width: max-content;
+  min-width: 100px;
 }
 
 .contentWrapper div ol {
@@ -100,36 +111,35 @@
   }
 
   .commentSection {
-    max-width: 80%;
+    max-width: 95%;
     margin: 1rem auto;
   }
 
   .contentWrapper {
-    max-width: 80%;
+    max-width: 95%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 
   .contentWrapper P {
-    font-size: 20px;
-    line-height: 2.2rem;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
   }
 
   .sharePostSection {
-    max-width: 80%;
+    max-width: 95%;
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 740px) {
-  .contentWrapper,
   .sharePostSection,
   .commentSection {
-    padding: var(--meduimpadding);
+    padding: 2rem 0;
   }
 
   .contentWrapper P {
-    font-size: 16px;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 2.5rem;
   }
 }

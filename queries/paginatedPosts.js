@@ -21,6 +21,7 @@ export const getPaginatedPosts = async (type, first, after) => {
               excerpt
               title
               slug
+              date
               featuredImage {
                 node {
                   mediaItemUrl
@@ -60,6 +61,7 @@ export const getPaginatedSearchPosts = async (type, first, after, search) => {
               excerpt
               title
               slug
+              date
               featuredImage {
                 node {
                   mediaItemUrl

@@ -1,4 +1,4 @@
-import { registerUser } from "../../utils/api";
+import { registerUser } from "../../mutations/register";
 import { v4 } from "uuid";
 import cookie from "cookie";
 import nextConnect from "next-connect";

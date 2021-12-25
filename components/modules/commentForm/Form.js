@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Input, TextArea } from "../../elements/FormElements/index";
 import { Button } from "../../elements/Button/index";
-import { createComment } from "../../../utils/commentMutation";
-import { updateComments } from "../../../utils/commentQuery";
+import { createComment } from "../../../mutations/comment";
+import { updatedComments } from "../../../queries/comment";
 import Style from "../../../styles/CommentForm.module.css";
 import buttonStyle from "../../../styles/Button.module.css";
 
@@ -15,10 +15,11 @@ const Form = ({ postId, setComments, type }) => {
   const authorRef = useRef();
   const authorEmailRef = useRef();
   const contentRef = useRef();
-  //update comments array after sending a comment
+
+  //update comments array after user post a comment
   useEffect(() => {
     const updateComment = async () => {
-      const data = await updateComments(`${type}`, postId);
+      const data = await updatedComments(`${type}`, postId);
       setComments(data?.comments.nodes);
       setShouldUpdateComment(false);
     };
@@ -26,6 +27,7 @@ const Form = ({ postId, setComments, type }) => {
     updateComment();
   }, [shouldUpdateComment, postId, setComments, type]);
 
+  //clear comment fields
   const clearInput = () => {
     (authorRef.current.value = ""),
       (authorEmailRef.current.value = ""),
@@ -45,6 +47,7 @@ const Form = ({ postId, setComments, type }) => {
     setContent(contentRef.current.value);
   };
 
+  // submit comment
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -62,6 +65,7 @@ const Form = ({ postId, setComments, type }) => {
       clearInput();
     }
   };
+
   return (
     <form className={Style.Form} onSubmit={handleSubmit}>
       <div className={Style.inputWrapper}>

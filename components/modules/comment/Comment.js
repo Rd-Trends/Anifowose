@@ -6,7 +6,7 @@ import Style from "../../../styles/Comment.module.css";
 const comment = ({ comments }) => {
   return (
     <>
-      {comments.map((item, index) => {
+      {comments?.map((item, index) => {
         const content = item?.content;
         const date = item?.commentedOn?.node?.date;
         const authorName = item?.author?.node?.name;

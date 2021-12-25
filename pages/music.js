@@ -3,7 +3,7 @@ import { Card } from "../components/modules/Card/index";
 import {
   getPaginatedPosts,
   getPaginatedSearchPosts,
-} from "../utils/paginatedQuery";
+} from "../queries/paginatedPosts";
 import Layout from "../components/layout/index";
 import { Button } from "../components/elements/Button/index";
 import { Input } from "../components/elements/FormElements/index";
@@ -78,7 +78,7 @@ const Music = ({ posts }) => {
   // }
 
   return (
-    <Layout>
+    <>
       <Seo url={url} />
       <article className={Style.container}>
         <div className={Style.titleAndSearchSection}>
@@ -132,7 +132,7 @@ const Music = ({ posts }) => {
           )}
         </div>
       </article>
-    </Layout>
+    </>
   );
 };
 

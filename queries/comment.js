@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 import { client } from "../lib/apollo";
 
-export const updateComments = async (type, Id) => {
+export const updatedComments = async (type, Id) => {
   switch (type) {
     case "post":
       const post = await client.query({

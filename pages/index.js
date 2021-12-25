@@ -6,8 +6,8 @@ import { Header } from "../components/modules/header";
 import { RecentMusic } from "../components/modules/RecentMusic/index";
 import { RecentNews } from "../components/modules/RecentNews/index";
 import { RecentQuotes } from "../components/modules/RecentQuotes.js/index";
-import { getPosts } from "../utils/wordpress";
-import { getQuotes } from "../utils/paginatedQuotesQuery";
+import { getPosts } from "../queries/wordpress";
+import { getQuotes } from "../queries/quotes";
 import About from "../components/modules/About/index";
 import Seo from "../components/layout/Seo";
 import { useEffect, useState } from "react";
@@ -23,14 +23,14 @@ export default function Home({ posts, quotes }) {
     setUrl(window.location.href);
   }, []);
   return (
-    <Layout>
+    <>
       <Seo url={url} />
       <Header />
       <RecentMusic posts={posts?.recentMusic} />
       <RecentNews posts={posts?.recentNews} />
       <RecentQuotes quotes={quotes?.edges} />
       <About />
-    </Layout>
+    </>
   );
 }
 

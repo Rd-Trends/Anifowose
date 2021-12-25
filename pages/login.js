@@ -45,7 +45,7 @@ const Login = () => {
   };
 
   return (
-    <Layout>
+    <>
       <div className={Style.wrapper}>
         <section className={Style.formWrapper}>
           <h1>Login</h1>
@@ -90,7 +90,7 @@ const Login = () => {
           </p>
         </section>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { getQuotes } from "../utils/paginatedQuotesQuery";
+import { getQuotes } from "../queries/quotes";
 import Layout from "../components/layout/index";
 import { Button } from "../components/elements/Button/index";
 import Seo from "../components/layout/Seo";
@@ -33,7 +33,7 @@ const Quotes = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <>
       <Seo url={url} />
       <article className={Style.container}>
         <h1 className={Style.heading}>Be Motivated!</h1>
@@ -69,7 +69,7 @@ const Quotes = ({ data }) => {
           )}
         </div>
       </article>
-    </Layout>
+    </>
   );
 };
 

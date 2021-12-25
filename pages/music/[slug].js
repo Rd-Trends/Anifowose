@@ -1,25 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout/index";
 import { Comment } from "../../components/modules/comment/index";
-import { getPost, getPostSlugs } from "../../utils/wordpress";
+import { getPost } from "../../queries/wordpress";
+import { getSlugs } from "../../queries/slugs";
 import { Form } from "../../components/modules/commentForm/index";
 import SharePost from "../../components/modules/SharePost/index";
 import Seo from "../../components/layout/Seo";
 import Style from "../../styles/Article.module.css";
+import buttonStyle from "../../styles/Button.module.css";
+import { object } from "sharp/lib/is";
 
 const PostPage = ({ post }) => {
   const [comments, setComments] = useState([]);
   const [url, setUrl] = useState("");
+
+  const downloadRef = useRef(null);
 
   useEffect(() => {
     setUrl(window.location.href);
     setComments(post?.comments?.nodes);
   }, [post.comments.nodes]);
 
+  // useEffect(async () => {
+  //   const data = {
+  //     mediaUrl: post?.mediaurl?.musicFile?.mediaItemUrl,
+  //   };
+  //   const response = await fetch(post?.mediaurl?.musicFile?.mediaItemUrl);
+  //   const blob = await response.blob();
+  //   console.log(blob);
+  //   const url = await URL.createObjectURL(blob);
+  //   console.log(url);
+  //   downloadRef.current.href = url;
+  //   downloadRef.current.download = `${post?.mediaurl?.musicFile?.title}.mp3`;
+  // }, []);
+  // const downloadMusicFile = async () => {
+
+  // };
+
   return (
-    <Layout>
+    <>
       {post && (
         <article className={Style.wrapper}>
           <Seo seo={post?.seo} url={url} />
@@ -39,6 +60,10 @@ const PostPage = ({ post }) => {
             className={Style.contentWrapper}
             dangerouslySetInnerHTML={{ __html: post?.content }}
           ></div>
+
+          {/* <a ref={downloadRef} download className={buttonStyle.btn_primary}>
+            download
+          </a> */}
 
           <div className={Style.sharePostSection}>
             <h3>Share this post</h3>
@@ -63,14 +88,14 @@ const PostPage = ({ post }) => {
       )}
 
       {!post && <p>Sorry, an error occured</p>}
-    </Layout>
+    </>
   );
 };
 
 export default PostPage;
 
 export async function getStaticPaths() {
-  const postSlugs = await getPostSlugs("music");
+  const postSlugs = await getSlugs("music");
 
   const paths = postSlugs.map((post) => ({
     params: {

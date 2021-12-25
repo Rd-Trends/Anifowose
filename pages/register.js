@@ -57,7 +57,7 @@ const Register = () => {
   };
 
   return (
-    <Layout>
+    <>
       <div className={Style.registerWrapper}>
         <section className={Style.formWrapper}>
           <h1>Sign Up</h1>
@@ -118,14 +118,14 @@ const Register = () => {
           </form>
 
           <p className={Style.loginLink}>
-            already have an account?{" "}
+            already have an account?
             <Link href="/login">
               <a>Login</a>
             </Link>
           </p>
         </section>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.5rem;
+  height: 3.8rem;
   padding: var(--largepadding);
   /* background-color: var(--primary); */
   background-color: var(--whitebg);
@@ -12,23 +12,6 @@
   right: 0;
   left: 0;
   z-index: 5;
-}
-
-.logoAndSearchWrapper,
-.logoAndSearchWrapper form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logoAndSearchWrapper form {
-  padding: 0.1rem;
-  padding-right: 1rem;
-  margin-left: 3rem;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  width: 300px;
-  max-width: 100%;
 }
 
 .nav_links_container,
@@ -46,10 +29,11 @@
   font-size: 1rem;
   text-transform: capitalize;
   display: block;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 0.7rem;
   transition: all 0.5s;
   color: var(--primary);
   font-weight: 300;
+  /* background-color: greenyellow; */
 }
 
 .nav_links_container ul a:active,

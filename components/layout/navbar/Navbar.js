@@ -17,15 +17,7 @@ const Navbar = () => {
   };
   return (
     <nav className={Style.nav}>
-      <div className={Style.logoAndSearchWrapper}>
-        <Logo imgSrc="/anifowoshe logo.svg" />
-        {/* <form>
-          <Input type="search" name="Search Posts" placeholder="Search...." />
-          <Button className={buttonStyle.btn_iconBtn}>
-            {<AiOutlineSearch />}
-          </Button>
-        </form> */}
-      </div>
+      <Logo imgSrc="/anifowoshe logo.svg" />
       <Button
         className={buttonStyle.btn_navBtn}
         handleClick={toggleLinks}

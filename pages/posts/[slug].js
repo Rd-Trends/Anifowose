@@ -4,7 +4,8 @@ import Image from "next/image";
 import Layout from "../../components/layout/index";
 import { Comment } from "../../components/modules/comment/index";
 import { Form } from "../../components/modules/commentForm/index";
-import { getPost, getPostSlugs } from "../../utils/wordpress";
+import { getPost } from "../../queries/wordpress";
+import { getSlugs } from "../../queries/slugs";
 import SharePost from "../../components/modules/SharePost/index";
 import Seo from "../../components/layout/Seo";
 import Style from "../../styles/Article.module.css";
@@ -18,7 +19,7 @@ const PostPage = ({ post }) => {
     setComments(post?.comments?.nodes);
   }, [post.comments.nodes]);
   return (
-    <Layout>
+    <>
       <Seo seo={post?.seo} url={url} />
       {post && (
         <article className={Style.wrapper}>
@@ -58,14 +59,14 @@ const PostPage = ({ post }) => {
       )}
 
       {!post && <p>Sorry, an error occured</p>}
-    </Layout>
+    </>
   );
 };
 
 export default PostPage;
 
 export async function getStaticPaths() {
-  const postSlugs = await getPostSlugs("posts");
+  const postSlugs = await getSlugs("posts");
   const paths = postSlugs.map((post) => ({
     params: {
       slug: post.slug,

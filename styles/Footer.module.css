@@ -4,7 +4,7 @@
   align-items: center;
   background: var(--primary);
   color: var(--whitetext);
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   margin-top: 2rem;
 }
 
@@ -15,14 +15,14 @@
 .navSection a {
   display: block;
   font-size: 16px;
-  padding: 1rem 0 0.5rem;
+  padding: 0.5rem 0 0.5rem;
   text-align: center;
   font-weight: 300;
 }
 
 .servicesSection {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .servicesSection h1 {

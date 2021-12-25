@@ -64,7 +64,7 @@ Seo.propTypes = {
 Seo.defaultProps = {
   seo: {
     canonical: "",
-    title: "Anifowoshe - EnterTainment Site, Music Download, Quotes",
+    title: "Anifowose - EnterTainment Site, Music Download, Quotes",
     metaDesc: `Your number one site to download music and motivational quotes
 Get all entertainment news, trending celebrities update - local and international`,
     opengraphDescription: `Your number one site to download music and motivational quotes

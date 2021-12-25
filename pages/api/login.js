@@ -1,4 +1,4 @@
-import { signIn } from "../../utils/api";
+import { signIn } from "../../mutations/login";
 import { v4 } from "uuid";
 import cookie from "cookie";
 import nextConnect from "next-connect";
