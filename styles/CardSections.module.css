@@ -1,7 +1,29 @@
 .container {
   text-align: center;
   padding: var(--smallpadding);
-  margin: 4rem 0 0;
+  margin: 2rem 0 0;
+}
+
+.genreSection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.genreSection a {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  margin-right: 0.7rem;
+  margin-bottom: 0.7rem;
+  border-radius: 5px;
+}
+
+.genreSection a:active,
+.genreSection a:hover,
+.genreSection a:focus {
+  border-color: var(--secondary);
 }
 
 .titleAndSearchSection {
@@ -42,8 +64,6 @@
   margin-bottom: 1.5rem;
   border-left: 5px solid var(--secondary);
   padding: 0rem 1rem;
-  width: max-content;
-  min-width: 100px;
   color: var(--primary);
   text-align: left;
 }
@@ -58,10 +78,10 @@
 .seeMoreLink {
   padding-top: 1.5rem;
   text-align: left;
-  border-bottom: 3px solid var(--secondary);
+  display: block;
   padding-bottom: 0.3rem;
-  width: fit-content;
-  font-size: 18px;
+  font-size: 16px;
+  color: var(--secondary);
 }
 
 @media screen and (min-width: 760px) {

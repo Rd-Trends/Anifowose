@@ -20,6 +20,7 @@ const RecentMusic = ({ posts }) => {
               featuredImage={post?.featuredImage?.node?.mediaItemUrl}
               altText={post?.featuredImage?.node?.title}
               buttonText="Read More..."
+              postType={post?.postType?.type}
             />
           );
         })}

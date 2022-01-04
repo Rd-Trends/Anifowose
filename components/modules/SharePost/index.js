@@ -12,7 +12,9 @@ import {
 
 const SharePost = ({ url, title }) => {
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <div
+      style={{ display: "flex", alignItems: "center", paddingLeft: "0.5rem" }}
+    >
       <FacebookShareButton url={url} title={title} style={{ margin: "0.5rem" }}>
         <FacebookIcon round size={48} />
       </FacebookShareButton>

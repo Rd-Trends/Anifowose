@@ -5,7 +5,13 @@ const Logo = ({ imgSrc }) => {
   return (
     <Link href="/">
       <a>
-        <Image src={imgSrc} width={150} height={50} alt="Anifowoshe Logo" />
+        <Image
+          src={imgSrc}
+          width={200}
+          height={35}
+          alt="Anifowose Logo"
+          priority
+        />
       </a>
     </Link>
   );

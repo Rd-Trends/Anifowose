@@ -9,7 +9,6 @@ const RecentMusic = ({ posts }) => {
       <h1 className={Style.heading}>Recent Music</h1>
       <div className={Style.cardWrapper}>
         {posts?.map((post) => {
-          // let { slug, title, featuredImage } = post;
           return (
             <Card
               key={post?.slug}
@@ -19,6 +18,7 @@ const RecentMusic = ({ posts }) => {
               featuredImage={post?.featuredImage?.node?.mediaItemUrl}
               altText={post?.featuredImage?.node?.title}
               buttonText="Download"
+              postType={post?.postType?.type}
             />
           );
         })}

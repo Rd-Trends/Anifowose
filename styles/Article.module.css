@@ -2,6 +2,9 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  background-color: var(--whitebg);
+  margin-top: 2rem;
+  color: black !important;
 }
 
 .title {
@@ -13,6 +16,7 @@
 
 .contentWrapper {
   padding: 1rem;
+  background: var(--whitebg);
 }
 
 .contentWrapper > * {
@@ -43,22 +47,21 @@
 
 .contentWrapper div h3 {
   font-weight: 500;
-  border-bottom: 3px solid var(--primary);
-  width: max-content;
-  min-width: 100px;
 }
 
 .contentWrapper div ol {
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
 }
 
 .contentWrapper div ol li {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.1rem;
+  line-height: 2rem;
+  font-weight: 300;
 }
 
 /* style for blockquote */
 
-.sidekick {
+.contentWrapper blockquote {
   position: relative;
   padding-left: 1em;
   border-left: 0.2em solid #039be5;
@@ -94,7 +97,56 @@
 }
 
 .sharePostSection h3 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* services section */
+.serviceSection {
+  padding: 1rem;
+}
+
+/* audio and download btn section */
+.audioAndDownLoadBtnSection {
+  padding: 0rem 0rem 0.5rem;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.audioAndDownLoadBtnSection audio {
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: -1.5rem;
+}
+
+/* download button */
+.downloadBtn {
+  align-items: center;
+  background-color: var(--secondary);
+  color: var(--whitetext);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: unset;
+}
+
+.downloadBtn > span {
+  padding-right: 0.5rem;
+}
+.downloadBtn p {
+  display: inline;
+  /* text-align: center; */
+  word-wrap: break-word;
+  font-size: 14px !important;
+  padding: 0rem 0.5rem 0 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.downloadBtn * {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 300px) {
@@ -104,10 +156,19 @@
 }
 
 @media screen and (min-width: 900px) {
+  .wrapper {
+    border-radius: 10px;
+  }
+
   .title {
     font-size: 40px;
     font-weight: 400;
     padding: 2rem;
+  }
+
+  .serviceSection {
+    max-width: 95%;
+    margin: 2rem auto;
   }
 
   .commentSection {
@@ -130,6 +191,21 @@
     max-width: 95%;
     margin: 0 auto;
   }
+
+  .audioAndDownLoadBtnSection {
+    padding-left: 0rem;
+    margin: 0 auto;
+  }
+
+  .downloadBtn {
+    padding: 0.3rem 1rem;
+  }
+
+  .contentWrapper div ol li {
+    padding-bottom: 0.5rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 740px) {
@@ -139,7 +215,13 @@
   }
 
   .contentWrapper P {
-    font-size: 1rem;
+    font-size: 0.7rem;
     line-height: 2.5rem;
+  }
+
+  .contentWrapper div ol li {
+    padding-bottom: 0.5rem;
+    line-height: 2rem;
+    font-size: 0.7rem;
   }
 }

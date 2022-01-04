@@ -49,8 +49,8 @@ const Seo = ({ seo, url }) => {
         /* eslint-enable */
       }}
       twitter={{
-        handle: "@omo__anifowoshe",
-        site: "@omo__anifowoshe",
+        handle: "@omo__anifowose",
+        site: "@omo__anifowose",
         cardType: "summary_large_image",
       }}
     />
@@ -69,12 +69,12 @@ Seo.defaultProps = {
 Get all entertainment news, trending celebrities update - local and international`,
     opengraphDescription: `Your number one site to download music and motivational quotes
 Get all entertainment news, trending celebrities update - local and international`,
-    opengraphTitle: "Anifowoshe - EnterTainment Site, Music Download, Quotes",
+    opengraphTitle: "Anifowose - EnterTainment Site, Music Download, Quotes",
     opengraphImage: {
-      mediaItemUrl: "/abg2.webp",
+      mediaItemUrl: "/opengraph.png",
     },
-    opengraphUrl: "",
-    opengraphSiteName: "Anifowoshe",
+    opengraphUrl: "https://omoanifowose.com",
+    opengraphSiteName: "Anifowose",
     opengraphType: "website",
   },
 };

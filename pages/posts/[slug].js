@@ -7,8 +7,13 @@ import { Form } from "../../components/modules/commentForm/index";
 import { getPost } from "../../queries/wordpress";
 import { getSlugs } from "../../queries/slugs";
 import SharePost from "../../components/modules/SharePost/index";
+import Services from "../../components/modules/services";
 import Seo from "../../components/layout/Seo";
+import { purifyHTML } from "../../utils/purifyHtml";
+import PostMeta from "../../components/modules/PostMeta/index";
+import parse from "html-react-parser";
 import Style from "../../styles/Article.module.css";
+import { getDate } from "../../utils/utils";
 
 const PostPage = ({ post }) => {
   const [comments, setComments] = useState([]);
@@ -18,6 +23,31 @@ const PostPage = ({ post }) => {
     setUrl(window.location.href);
     setComments(post?.comments?.nodes);
   }, [post.comments.nodes]);
+
+  const options = {
+    replace: (domNode) => {
+      if (domNode.name != "img") {
+        return;
+      }
+
+      if (domNode.name == "img") {
+        const src = domNode.attribs.src;
+
+        return (
+          <Image
+            src={src}
+            width={100}
+            height={100}
+            layout="responsive"
+            sizes="50vw"
+            priority
+            alt="image for posts"
+          />
+        );
+      }
+    },
+  };
+
   return (
     <>
       <Seo seo={post?.seo} url={url} />
@@ -36,14 +66,25 @@ const PostPage = ({ post }) => {
             />
           </div>
 
-          <div
-            className={Style.contentWrapper}
-            dangerouslySetInnerHTML={{ __html: post?.content }}
-          ></div>
+          <PostMeta
+            artist={post?.author?.node?.username}
+            readTime={post?.seo?.readingTime}
+            datePublished={getDate(post?.date)}
+            categories={post?.categories?.nodes}
+            tags={post?.tags?.nodes}
+          />
+
+          <div className={Style.contentWrapper}>
+            {parse(purifyHTML(post?.content), options)}
+          </div>
 
           <div className={Style.sharePostSection}>
             <h3>Share this post</h3>
             <SharePost title={post?.title} url={url} />
+          </div>
+
+          <div className={Style.serviceSection}>
+            <Services />
           </div>
 
           <div className={Style.commentSection}>

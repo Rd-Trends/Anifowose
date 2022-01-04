@@ -27,7 +27,7 @@ const SocialMediaLinks = () => {
             width={50}
             height={50}
             src="/instagram.svg"
-            rel="noreferrer"
+            priority
           />
         }
       </a>
@@ -48,6 +48,21 @@ const SocialMediaLinks = () => {
         rel="noreferrer"
       >
         {<WhatsappIcon size={50} round />}
+      </a>
+      <a
+        style={{ margin: "0.5rem" }}
+        href="mailto:kingsleyanifowose@gmail.com"
+        aria-label="link to Anifowose instagram profile"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Image
+          alt="gmail icon"
+          width={50}
+          height={50}
+          src="/gmail icon.svg"
+          priority
+        />
       </a>
     </div>
   );

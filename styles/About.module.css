@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
   border-left: 5px solid var(--secondary);
   padding: 0rem 1rem;
-  width: fit-content;
+
   color: var(--primary);
   text-align: left;
 }
@@ -27,8 +27,8 @@
   }
 
   .About p {
-    font-size: 16px;
-    line-height: 1.5rem;
+    font-size: 0.6rem;
+    line-height: 2rem;
   }
 }
 
@@ -39,6 +39,6 @@
 
   .About p {
     font-size: 20px;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
   }
 }

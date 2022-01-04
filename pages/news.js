@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Card } from "../components/modules/Card/index";
-import {
-  getPaginatedPosts,
-  getPaginatedSearchPosts,
-} from "../queries/paginatedPosts";
+import { getNews } from "../queries/news";
 import { Input } from "../components/elements/FormElements/index";
 import { AiOutlineSearch } from "react-icons/ai";
 import Layout from "../components/layout/index";
@@ -36,14 +33,9 @@ const Music = ({ posts }) => {
   const updatePost = async () => {
     let updatedPostsData;
     if (isSearching) {
-      updatedPostsData = await getPaginatedSearchPosts(
-        "posts",
-        8,
-        endCursor,
-        searchTerm
-      );
+      updatedPostsData = await getNews(8, endCursor, searchTerm);
     } else {
-      updatedPostsData = await getPaginatedPosts("posts", 8, endCursor);
+      updatedPostsData = await getNews(8, endCursor);
     }
     const updatedPosts = updatedPostsData.edges;
     setPagePosts((prevPagePosts) => [...prevPagePosts, ...updatedPosts]);
@@ -54,12 +46,7 @@ const Music = ({ posts }) => {
   const getSearchedPosts = async (e) => {
     e.preventDefault();
     setIsSearching(true);
-    const searchedPostsData = await getPaginatedSearchPosts(
-      "posts",
-      8,
-      null,
-      searchTerm
-    );
+    const searchedPostsData = await getNews(8, null, searchTerm);
     const searchedPosts = searchedPostsData.edges;
     setPagePosts(searchedPosts);
     setHasNextPage(searchedPostsData.pageInfo.hasNextPage);
@@ -97,7 +84,7 @@ const Music = ({ posts }) => {
         <div className={Style.cardWrapper}>
           {pagePosts.map((post) => {
             const { node } = post;
-            let { excerpt, date, slug, title, featuredImage } = node;
+            let { excerpt, date, slug, title, featuredImage, postType } = node;
             return (
               <Card
                 key={slug}
@@ -108,6 +95,7 @@ const Music = ({ posts }) => {
                 featuredImage={featuredImage?.node.mediaItemUrl}
                 altText={featuredImage?.node?.title}
                 buttonText="Read More..."
+                postType={postType?.type}
               />
             );
           })}
@@ -133,7 +121,7 @@ const Music = ({ posts }) => {
 export default Music;
 
 export async function getStaticProps({ params }) {
-  const posts = await getPaginatedPosts("posts", 8, null);
+  const posts = await getNews(8, null, null);
 
   return {
     props: {

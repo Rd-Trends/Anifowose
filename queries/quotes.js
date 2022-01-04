@@ -31,6 +31,7 @@ export const getQuotes = async (first, after) => {
       }
     `,
     variables: { first, after },
+    fetchPolicy: "no-cache",
   });
 
   return quotes.data.quotes;

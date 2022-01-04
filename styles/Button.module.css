@@ -3,7 +3,7 @@
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: i6px;
+  font-size: 12px;
   display: inline-block;
   transition-duration: 0.3s;
   border: 2px solid transparent;
@@ -54,7 +54,7 @@
 .btn_navBtn {
   composes: btn_iconBtn;
   position: fixed;
-  top: 8px;
+  top: 10px;
   right: 16px;
   z-index: 20;
   color: var(--secondary);

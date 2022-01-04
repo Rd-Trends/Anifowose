@@ -4,32 +4,32 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "@apollo/client": "^3.5.5",
+    "@madzadev/audio-player": "^1.1.11",
     "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
+    "classnames": "^2.3.1",
     "cookie": "^0.4.1",
-    "formik": "^2.2.9",
+    "cross-env": "^7.0.3",
+    "dompurify": "^2.3.4",
     "framer-motion": "^5.3.3",
     "graphql": "^16.0.1",
     "html-react-parser": "^1.4.2",
-    "js-file-download": "^0.4.12",
-    "js-file-downloader": "^1.1.23",
-    "next": "12.0.4",
+    "isomorphic-dompurify": "^0.17.0",
+    "next": "^12.0.7",
     "next-connect": "^0.11.0",
     "next-seo": "^4.28.1",
     "next-share": "^0.12.2",
     "randomcolor": "^0.6.2",
     "react": "17.0.2",
+    "react-audio-player": "^0.17.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-redux": "^7.2.6",
-    "sharp": "^0.29.3",
-    "swiper": "^7.3.1",
-    "swr": "^1.0.1",
     "uuid": "^8.3.2",
     "validator": "^13.7.0",
     "yup": "^0.32.11"
@@ -38,6 +38,7 @@
     "@types/cookie": "^0.4.1",
     "@types/uuid": "^8.3.3",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.4"
+    "eslint-config-next": "12.0.4",
+    "next-sitemap": "^1.6.203"
   }
 }

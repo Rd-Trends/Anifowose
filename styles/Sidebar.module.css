@@ -12,6 +12,8 @@
   top: 0;
   right: 0;
   bottom: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .nav,
@@ -23,24 +25,34 @@
 }
 
 .nav_links_container {
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 
 .nav_links_container ul {
   list-style: none;
+  transition: height 5s linear;
 }
 
 .nav_links_container ul li {
   margin-bottom: 1rem;
 }
 
+.nav_links_container ul li > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  width: 100%;
+  max-width: 100%;
+}
+
 .nav_links_container ul li a {
   font-size: 1rem;
   text-transform: capitalize;
   display: block;
-  padding: 1rem 1rem 1rem 0rem;
-  width: 250px;
-  border-bottom: 1px solid grey;
+  padding: 1rem 2rem 1rem 0rem;
+  width: 100%;
+  /* border-bottom: 1px solid grey; */
   transition: all 0.5s;
 }
 
@@ -52,6 +64,15 @@
 
 .CTA {
   margin-top: 1rem;
+}
+
+.dropDown a {
+  padding-left: 2rem !important;
+}
+
+.dropDown {
+  /* background: rgb(61, 61, 107); */
+  margin-left: -1rem;
 }
 
 /* @media screen and (max-width: 1024px) {

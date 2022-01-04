@@ -118,7 +118,7 @@ const Register = () => {
           </form>
 
           <p className={Style.loginLink}>
-            already have an account?
+            already have an account?{" "}
             <Link href="/login">
               <a>Login</a>
             </Link>

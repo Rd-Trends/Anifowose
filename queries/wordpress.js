@@ -11,6 +11,9 @@ export const getPosts = async () => {
             slug
             date
             excerpt
+            postType {
+              type
+            }
             featuredImage {
               node {
                 mediaItemUrl
@@ -24,6 +27,9 @@ export const getPosts = async () => {
             title
             slug
             date
+            postType {
+              type
+            }
             featuredImage {
               node {
                 mediaItemUrl
@@ -34,6 +40,7 @@ export const getPosts = async () => {
         }
       }
     `,
+    fetchPolicy: "no-cache",
   });
 
   return {
@@ -86,12 +93,25 @@ export const getPost = async (type, slug) => {
                 }
               }
               date
+              categories {
+                nodes {
+                  uri
+                  name
+                }
+              }
+              tags {
+                nodes {
+                  name
+                  uri
+                }
+              }
               seo {
                 title
                 metaDesc
                 opengraphDescription
                 opengraphType
                 opengraphTitle
+                readingTime
                 opengraphImage {
                   mediaItemUrl
                 }
@@ -105,6 +125,7 @@ export const getPost = async (type, slug) => {
           }
         `,
         variables: { slug },
+        fetchPolicy: "no-cache",
       });
 
       return post.data.postBy;
@@ -138,21 +159,30 @@ export const getPost = async (type, slug) => {
                   }
                 }
               }
+              artistName {
+                artist
+              }
+              releaseDate {
+                releasedate
+              }
+              runTime {
+                runtime
+              }
+              categories {
+                nodes {
+                  uri
+                  name
+                }
+              }
               tags {
                 nodes {
                   name
-                  tagId
+                  uri
                 }
               }
               excerpt(format: RAW)
               featuredImage {
                 node {
-                  mediaItemUrl
-                  title
-                }
-              }
-              mediaurl {
-                musicFile {
                   mediaItemUrl
                   title
                 }
@@ -176,6 +206,7 @@ export const getPost = async (type, slug) => {
           }
         `,
         variables: { slug },
+        fetchPolicy: "no-cache",
       });
 
       return music.data.musicBy;

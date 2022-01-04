@@ -8,6 +8,19 @@
   background-color: var(--whitebg);
   border-radius: 0px 10px 10px 0px;
   padding-bottom: 1rem;
+  position: relative;
+}
+
+.musicType {
+  position: absolute;
+  top: 30%;
+  left: 0rem;
+  padding: 0.2rem 1rem !important;
+  font-size: 12px !important;
+  border-radius: 0 10% 10% 0;
+  background-color: var(--secondary);
+  color: var(--whitebg);
+  text-align: center;
 }
 
 .cardImageContainer {
@@ -31,8 +44,10 @@
 
 .cardBtn {
   composes: btn_primary from "./Button.module.css";
-  max-width: 150px;
-  padding: 0.5rem 1rem;
+  width: 120px;
   margin-left: 1rem;
   color: white;
+  word-wrap: normal;
+  word-break: keep-all;
+  padding: 0.5rem 1rem;
 }

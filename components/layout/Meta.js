@@ -88,6 +88,21 @@ export default function Meta() {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
+
+      {/* facebook verification */}
+      <meta
+        name="facebook-domain-verification"
+        content="tax2vv3p8d7u9iki8u6nyfqxnygbds"
+      />
+
+      {/* google search verification */}
+      <meta
+        name="google-site-verification"
+        content="MTRkQgvsY7RgM5QmfrHFxAvvhVj2yy8Dme45TG2Tsf4"
+      />
+
+      {/* ms verification */}
+      <meta name="msvalidate.01" content="CE60397EAFC93A9CAC99DDF4E9D52738" />
     </Head>
   );
 }

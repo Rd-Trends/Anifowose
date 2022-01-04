@@ -83,7 +83,7 @@ const Login = () => {
           </form>
 
           <p className={Style.loginLink}>
-            Do not have an account?
+            Do not have an account?{" "}
             <Link href="/register">
               <a>Register</a>
             </Link>

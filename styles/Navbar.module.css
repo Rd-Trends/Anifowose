@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3.8rem;
+  height: 4rem;
   padding: var(--largepadding);
   /* background-color: var(--primary); */
   background-color: var(--whitebg);
@@ -25,12 +25,24 @@
   list-style: none;
 }
 
+.nav_links_container ul li {
+  position: relative;
+}
+
+.nav_links_container ul li > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+}
+
 .nav_links_container ul li a {
   font-size: 1rem;
   text-transform: capitalize;
   display: block;
-  padding: 1rem 1rem 0.7rem;
+  padding: 1rem 2rem 0.7rem;
   transition: all 0.5s;
+  padding-right: 0rem;
   color: var(--primary);
   font-weight: 300;
   /* background-color: greenyellow; */
@@ -40,6 +52,24 @@
 .nav_links_container ul a:hover,
 .nav_links_container ul a:focus {
   color: var(--secondary);
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: space-between;
+  position: absolute;
+  background-color: var(--whitebg);
+  width: 150px;
+  padding-left: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgb(230, 225, 225);
+  top: 3.9rem;
+}
+
+.dropDown li a {
+  padding: 1rem !important;
 }
 
 @media screen and (max-width: 900px) {

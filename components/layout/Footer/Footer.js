@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={Style.footer}>
       <div className={Style.logoSection}>
-        <Logo imgSrc="/anifowoshewhitelogo.svg" />
+        <Logo imgSrc="/omo white.png" />
         <SocialMediaLinks />
       </div>
       <div className={Style.navSection}>
